@@ -1,0 +1,49 @@
+[
+  {"name":"系统设置", "code":"SYS_ALL", "id" : 1, "pId" : 0, "open":true},
+  {"name":"安全设置", "code" : "SAFE_ALL", "id":11, "pId":1},
+
+
+  {"name":"角色管理", "code":"ROLE_ALL", "id":12, "pId":1},
+  {"name":"用户管理", "code":"USER_ALL", "id":13, "pId":1},
+
+
+  {"name":"店铺管理", "code":"SHOP_ALL", "id": 2, "pId":0},
+  {"name":"店铺管理", "code":"SHOP_ALL", "id": 2, "pId":0},
+
+
+  {"name":"财务统计", "code":"FINANCE_ALL", "id": 3, "pId":0},
+  {"name":"营业总额统计", "code":"BUSINESS_ALL", "id": 31, "pId":3},
+  {"name":"营业额明细", "code":"BUSINESS_DETAIL", "id": 32, "pId":3},
+  {"name":"营业总走势", "code":"BUSINESS_TREND", "id": 33, "pId":3},
+  {"name":"销售补贴总额统计", "code":"SAIL_ALL", "id": 34, "pId":3},
+  {"name":"销售补贴额明细", "code":"SAIL_DETAIL", "id": 35, "pId":3},
+  {"name":"销售补贴额总走势", "code":"SAIL_TREND", "id": 36, "pId":3},
+  {"name":"净收入总额统计", "code":"INCOME_ALL", "id": 37, "pId":3},
+  {"name":"净收入额明细", "code":"INCOME_DETAIL", "id": 38, "pId":3},
+  {"name":"净收入额总走势", "code":"INCOME_TREND", "id": 39, "pId":3},
+
+
+
+  {"name":"顾客分析", "code":"CUSTOMER_ALL", "id": 4, "pId":0},
+  {"name":"新、老顾客数据量统计分析","code":"CUSTOMER_STAT", "id": 41, "pId":4},
+  {"name":"新、老顾客信息列表","code":"CUSTOMER_INFO","id": 42, "pId":4},
+  {"name":"顾客偏好分析","code":"CUSTOMER_PREFERENCE", "id": 43, "pId":4},
+  {"name":"单用户分析","code":"CUSTOMER_ANALYSIS", "id": 44, "pId":4},
+
+
+  {"name":"热门分析", "code":"HOT_ALL","id": 5, "pId":0},
+  {"name":"热门菜品分析","code":"HOT_DISH", "id": 51, "pId":5},
+  {"name":"热门店铺分析","code":"HOT_SHOP", "id": 52, "pId":5},
+  {"name":"热门时段分析","code":"HOT_TIME", "id": 53, "pId":5},
+
+  {"name":"订单统计", "code":"ORDER_ALL", "id": 6, "pId":0},
+  {"name":"订单数据列表","code":"ORDER_LIST", "id": 61, "pId":6},
+  {"name":"退单原因分析","code":"ORDER_BACK", "id": 62, "pId":6},
+
+  {"name":"评价统计", "code":"COMMENT_ALL",  "id": 7, "pId":0},
+  {"name":"评价星级分析","code":"COMMENT_ANALYSIS","id": 71, "pId":7},
+  {"name":"评价信息列表","code":"COMMENT_LIST",   "id": 72, "pId":7},
+
+  {"name":"平台对比", "code":"COMPARE_PLATFORM", "id": 8, "pId":0},
+  {"name":"店铺对比", "code":"COMPARE_SHOP", "id": 9, "pId":0}
+]

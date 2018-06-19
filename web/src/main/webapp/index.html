@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入jquery -->
+    <script src="static/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="static/lib/jquery/jquery.cookie.js"></script>
+    <!-- 引入layui -->
+    <link rel="stylesheet" href="static/lib/layui/css/layui.css">
+    <script src="static/lib/layui/layui.js"></script>
+</head>
+<body>
+<div style="margin-top: 50px">
+    <form action="javascript:void(0);" class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" name="account" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" style="width: 300px;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" style="width: 300px">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function() {
+        /*//一般直接写在一个js文件中
+         layui.use(['layer', 'form'], function(){
+         var layer = layui.layer
+         ,form = layui.form;
+         });*/
+        /**
+         * IE8对于console的不兼容问题
+         */
+        window.console = window.console || (function () {
+                    var c = {};
+                    c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile
+                            = c.clear = c.exception = c.trace = c.assert = function () {
+                    };
+                    return c;
+                })();
+        $.getUrlParam = function (name, uri) {
+            uri = uri || window.location.href;
+            if (name && name != null) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = uri.substring(uri.indexOf('?') + 1).match(reg);
+                return (r != null) ? r[2] : null;
+            }
+
+            var args= {};
+            var query=uri.substring(uri.indexOf('?') + 1);//获取查询串
+            var pairs=query.split("&");//在逗号处断开
+            for(var   i=0;i<pairs.length;i++)
+            {
+                var pos=pairs[i].indexOf('=');//查找name=value
+                if(pos>-1){
+                    var argname=pairs[i].substring(0,pos);//提取name
+                    var val=pairs[i].substring(pos+1);//提取value
+                    args[argname]=val;//存为属性
+                }
+            }
+            return args;
+        };
+
+        layui.config({
+            base: 'static/js/modules/' //你的模块目录
+        }).extend({// 拓展的插件，即非base目录下的写在这里
+            'stringutils': 'utils/stringutils'
+        }).use("login");
+    });
+</script>
+</body>
+</html>

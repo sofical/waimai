@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入jquery -->
+    <script src="static/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="static/lib/jquery/jquery.cookie.js"></script>
+    <!-- 引入layui -->
+    <link rel="stylesheet" href="static/lib/layui/css/layui.css" media="all">
+    <script src="static/lib/layui/layui.js"></script>
+    <!-- 引入Ztree-->
+    <link rel="stylesheet" href="static/lib/ztree/zTreeStyle.css">
+    <script src="static/lib/ztree/jquery.ztree.core.js"></script>
+    <script src="static/lib/ztree/jquery.ztree.excheck.js"></script>
+    <script src="static/lib/echarts/echarts.min.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">原味觉醒</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <!--
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+            -->
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <!--
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>-->
+            <li class="layui-nav-item"><a href="javascript:void(0)" class="_button-logout">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div id="mainDiv" style="padding: 15px;"><div id="mainChart" style="height: 400px"></div></div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+</div>
+<script>
+    $(function() {
+        /**
+         * IE8对于console的不兼容问题
+         */
+        window.console = window.console || (function () {
+                    var c = {};
+                    c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile
+                            = c.clear = c.exception = c.trace = c.assert = function () {
+                    };
+                    return c;
+                })();
+        $.getUrlParam = function (name, uri) {
+            uri = uri || window.location.href;
+            if (name && name != null) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = uri.substring(uri.indexOf('?') + 1).match(reg);
+                return (r != null) ? r[2] : null;
+            }
+
+            var args= {};
+            var query=uri.substring(uri.indexOf('?') + 1);//获取查询串
+            var pairs=query.split("&");//在逗号处断开
+            for(var   i=0;i<pairs.length;i++)
+            {
+                var pos=pairs[i].indexOf('=');//查找name=value
+                if(pos>-1){
+                    var argname=pairs[i].substring(0,pos);//提取name
+                    var val=pairs[i].substring(pos+1);//提取value
+                    args[argname]=val;//存为属性
+                }
+            }
+            return args;
+        };
+
+        layui.config({
+            base: 'static/js/modules/' //你的模块目录
+        }).extend({// 拓展的插件，即非base目录下的写在这里
+            'stringutils': 'utils/stringutils'
+        }).use(["main"]);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<p style="margin-bottom: 10px;">
+    <span class="layui-breadcrumb">
+    <a href="javascript:void(0);">订单统计</a>
+    <a href="javascript:void(0);"><cite>订单数据列表</cite></a>
+     <a href="javascript:void(0);"><cite>订单详情</cite></a>
+    </span>
+</p>
+<form class="layui-form" id="editShopForm"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+    <div class="layui-form-item">
+        <label class="layui-form-label">平台:</label>
+        <div class="layui-input-block">
+            <select name="platform" id="platform-select" lay-filter="platform" disabled>
+                <!--# for(var index in data.platforms){#-->
+                <option value="{# index #}">{# data.platforms[index] #}</option>
+                <!--#   } #-->
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">店铺名称:</label>
+        <div class="layui-input-block">
+            <input type="text"  name="shop_name" placeholder="请输入"  autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">时间:</label>
+        <div class="layui-input-block">
+            <input type="text"  name="order_time" placeholder="请输入" autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">客户手机:</label>
+        <div class="layui-input-block">
+            <input type="text"  name="customer_phone" placeholder="请输入" autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">客户称呼:</label>
+        <div class="layui-input-block">
+            <input type="text"  name="customer_name" placeholder="请输入" autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">客户地址:</label>
+        <div class="layui-input-block">
+            <input type="text"  name="customer_address" placeholder="请输入" autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">订单菜品:</label>
+        <div class="layui-input-block">
+            <span type="text" id="dish_list" >
+            </span>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*">返回</button>
+        </div>
+    </div>
+    <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+</form>

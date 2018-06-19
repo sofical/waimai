@@ -1,0 +1,8 @@
+{
+  "security" : [
+    "/api/v1/**"
+  ],
+  "unsecurity" : [
+    "/api/v1/tokens"
+  ]
+}

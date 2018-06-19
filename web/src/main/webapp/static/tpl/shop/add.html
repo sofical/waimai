@@ -1,0 +1,79 @@
+<p style="margin-bottom: 10px;">
+    <span class="layui-breadcrumb">
+    <a href="javascript:void(0);">店铺管理</a>
+    <a href="javascript:void(0);"><cite>店铺管理</cite></a>
+     <a href="javascript:void(0);"><cite>添加店铺</cite></a>
+    </span>
+</p>
+<form class="layui-form" id="editShopForm"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+    <div class="layui-form-item">
+        <label class="layui-form-label">平台:</label>
+        <div class="layui-input-block">
+            <select name="platform" id="platform-select" lay-filter="platform">
+                <!--# for(var index in data.platforms){#-->
+                <option value="{# index #}">{# data.platforms[index] #}</option>
+                <!--#   } #-->
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">编码:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="required" name="code" placeholder="请输入"  autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">名称:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="required" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item  extra-data  extra-data-1" style="display: none">
+        <label class="layui-form-label">饿了么 access-token:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.access_token" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item extra-data extra-data-1" style="display: none">
+        <label class="layui-form-label">饿了么 token_type:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.token_type" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item extra-data  extra-data-1" style="display: none">
+        <label class="layui-form-label">饿了么 expires_in:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.expires_in" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <!--<div class="layui-form-item  extra-data  extra-data-1" style="display: none">-->
+        <!--<label class="layui-form-label">饿了么 expires_in:</label>-->
+        <!--<div class="layui-input-block">-->
+            <!--<input type="text" lay-verify="" name="extra_data.expires_in" placeholder="请输入" autocomplete="off" class="layui-input">-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="layui-form-item  extra-data  extra-data-3" style="display: none">
+        <label class="layui-form-label">美团 token:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.app_auth_token" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item  extra-data extra-data-3" style="display: none">
+        <label class="layui-form-label">美团 business_id:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.business_id" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item extra-data  extra-data-3" style="display: none">
+        <label class="layui-form-label">美团poi:</label>
+        <div class="layui-input-block">
+            <input type="text" lay-verify="" name="extra_data.e_po_id" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*">确认</button>
+        </div>
+    </div>
+    <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+</form>

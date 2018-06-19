@@ -1,0 +1,42 @@
+[
+  {"name":"系统设置", "code":"SYS_ALL", "_child":[
+    {"name":"安全管理","code":"SAFE_ALL", "func":"safe:enter"},
+    {"name":"角色管理","code":"ROLE_ALL", "func":"role:enter"},
+    {"name":"用户管理","code":"USER_ALL", "func":"user:enter"}
+  ]},
+  {"name":"店铺管理", "code":"SHOP_ALL", "_child":[
+    {"name":"店铺管理","code":"SHOP_ALL", "func":"shop:enter"}
+  ]},
+  {"name":"财务统计", "code":"FINANCE_ALL", "_child":[
+    {"name":"营业总额统计","code":"BUSINESS_ALL", "func":"finance:business_all"},
+    {"name":"营业额明细","code":"BUSINESS_DETAIL", "func":"finance:business_detail"},
+    {"name":"营业总走势","code":"BUSINESS_TREND", "func":"finance:business_trend"},
+    {"name":"销售补贴总额统计","code":"SAIL_ALL", "func":"finance:sail_all"},
+    {"name":"销售补贴额明细","code":"SAIL_DETAIL", "func":"finance:sail_detail"},
+    {"name":"销售补贴额总走势","code":"SAIL_TREND", "func":"finance:sail_trend"},
+    {"name":"净收入总额统计","code":"INCOME_ALL", "func":"finance:income_all"},
+    {"name":"净收入额明细","code":"INCOME_DETAIL", "func":"finance:income_detail"},
+    {"name":"净收入额总走势","code":"INCOME_TREND", "func":"finance:income_trend"}
+  ]},
+  {"name":"顾客分析", "code":"CUSTOMER_ALL", "_child":[
+    {"name":"新、老顾客数据量统计分析","code":"CUSTOMER_STAT", "func":"customer:customer_stat"},
+    {"name":"新、老顾客信息列表","code":"CUSTOMER_INFO", "func":"customer:customer_info"},
+    {"name":"顾客偏好分析","code":"CUSTOMER_PREFERENCE", "func":"customer:customer_preference"},
+    {"name":"单用户分析","code":"CUSTOMER_ANALYSIS", "func":"customer:customer_analysis"}
+  ]},
+  {"name":"热门分析", "code":"HOT_ALL", "_child":[
+    {"name":"热门菜品分析","code":"HOT_DISH", "func":"hot:hot_dish"},
+    {"name":"热门店铺分析","code":"HOT_SHOP", "func":"hot:hot_shop"},
+    {"name":"热门时段分析","code":"HOT_TIME", "func":"hot:hot_time"}
+  ]},
+  {"name":"订单统计", "code":"ORDER_ALL",  "_child":[
+    {"name":"订单数据列表","code":"ORDER_LIST", "func":"order:order_list"},
+    {"name":"退单原因分析","code":"ORDER_BACK", "func":"order:order_back"}
+  ]},
+  {"name":"评价统计", "code":"COMMENT_ALL",   "_child":[
+    {"name":"评价星级分析","code":"COMMENT_ANALYSIS", "func":"comment:comment_analysis"},
+    {"name":"评价信息列表","code":"COMMENT_LIST", "func":"comment:comment_list"}
+  ]},
+  {"name":"平台对比", "code":"COMPARE_PLATFORM", "func":"compare:platform_compare"},
+  {"name":"店铺对比", "code":"COMPARE_SHOP", "func":"compare:shop_compare"}
+]

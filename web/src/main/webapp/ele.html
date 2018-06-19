@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ele</title>
+    <script src="https://shadow.elemecdn.com/lib/eleme-openapi-jssdk@0.3.1/jssdk.js" type="text/javascript" charset="utf-8"></script>
+    <script lang="javascript">
+        window.onload = function() {
+            eleme.getUserId().then(function(id){
+                console.log(id);
+            });
+
+            eleme.getCurrentShopId().then(function(id){
+                console.log(id);
+            });
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

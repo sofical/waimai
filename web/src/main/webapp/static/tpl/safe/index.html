@@ -1,0 +1,32 @@
+<p style="margin-bottom: 10px;">
+<span class="layui-breadcrumb" >
+  <a href="javascript:void(0);">系统设置</a>
+    <a href="javascript:void(0);"><cite>安全设置</cite></a>
+</span>
+</p>
+<form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+    <div class="layui-form-item">
+        <label class="layui-form-label">旧密码</label>
+        <div class="layui-input-block">
+            <input type="password" lay-verify="required" name="old_pass" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新密码</label>
+        <div class="layui-input-block">
+            <input type="password" lay-verify="required" name="new_pass" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">请确认</label>
+        <div class="layui-input-block">
+            <input type="password" lay-verify="required" name="sure_pass" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*">确认修改</button>
+        </div>
+    </div>
+    <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+</form>
